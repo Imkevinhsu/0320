@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>	
+	<p>Input1</p>
+	<input type="number" id="Data1"  value="1">
+	<p>Input2</p>
+	<input type="number" id="Data2"  value="1">
+	<p></p>
+	
+<script >
+   function Add(p1,p2){
+    return Number(p1)+Number(p2);
+   }
+    function Less(p1,p2){
+    return Number(p1)-Number(p2);
+   }
+   function Multiply(p1,p2){
+    return Number(p1)*Number(p2);
+   }
+   function Except(p1,p2){
+    return Number(p1)/Number(p2);
+   }
+   function Clear(){
+    document.getElementById('Data1').value = "";
+    document.getElementById('Data2').value = "";
+    return "";
+}
+
+</script>
+<button onclick="document.getElementById('demo').innerHTML=Add(Data1.value,Data2.value)">+</button>
+<button onclick="document.getElementById('demo').innerHTML=Less(Data1.value,Data2.value)">-</button>
+<button onclick="document.getElementById('demo').innerHTML=Multiply(Data1.value,Data2.value)">*</button>
+<button onclick="document.getElementById('demo').innerHTML=Except(Data1.value,Data2.value)">/</button>
+<button onclick="document.getElementById('demo').innerHTML=Clear()">清除</button>
+<p id="demo"></p>
+</body>
+</html>

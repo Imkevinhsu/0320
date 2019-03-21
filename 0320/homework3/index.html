@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script>
+	function Test(p1){
+		
+			if (Number(p1)>=60){
+			return "Pass!!";
+		} else  {
+			return "Fail!!";
+		}
+		
+		
+	}
+</script>
+<p>Input your grade</p>
+<input type="number" id="Data1">
+<button onclick="document.getElementById('demo').innerHTML=Test(Data1.value)">判別</button>
+<p id="demo"></p>
+</body>
+</html>
