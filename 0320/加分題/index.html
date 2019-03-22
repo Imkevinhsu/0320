@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<p>Input your grade</p>
+<input type="number" id="Data1">
+<button onclick="document.getElementById('demo').innerHTML=Test(Data1.value);Paint(5)">判別</button>
+<p id="demo"></p>
+   <canvas id="myCanvas" width="600" height="200" style="border:1px solid #000000";> </canvas>
+   <script>
+	var c=document.getElementById("myCanvas");
+	var ctx=c.getContext("2d");
+	var x=0,grade;
+	function Test(p1){
+	 c.height=c.height;
+		grade=p1;
+			if (Number(p1)>=60){	
+			Paint();		
+			return "Pass!!";
+		} else  {
+			Paint();
+			return "Fail!!";
+		}
+	}
+
+	function Paint(){
+	   ctx.fillStyle="#FF0000";
+       ctx.fillRect(x,70,1,50);
+        x++;
+        if (x>grade*5) {
+        	ctx.font = "20px Arial";
+            ctx.fillText(grade,Number(grade*5)+5,100);
+        	clearInterval()
+        	x=0;;
+        }
+          setInterval(Paint,100);
+	}
+	
+</script>
+
+</body>
